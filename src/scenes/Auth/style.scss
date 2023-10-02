@@ -1,0 +1,125 @@
+@import '../../styles/variables';
+
+.auth {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth__content {
+  position: relative;
+  width: 500px;
+  //min-height: 519px;
+  padding: 16px;
+  border-radius: 16px;
+  background: $backColor;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  color: $txtBlackColor;
+
+  .heading {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .authForm {
+    width: 100%;
+
+    .title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .fieldWrap {
+      margin-bottom: 16px;
+    }
+
+    .field {
+      width: 100%;
+      padding: 15.5px 16px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background: $inputColor;
+      color: $txtGrayColor;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+
+      &::placeholder {
+        color: #808185ad;
+      }
+    }
+
+    .field_error {
+      border: 1px solid $errColor;
+      //outline: 1px solid $errColor;
+    }
+
+    .textErr {
+      margin-top: 4px;
+      color: $errColor;
+      font-size: 10px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .passwWrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .btn {
+        position: absolute;
+        right: 8px;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        color: $txtGrayColor;
+      }
+    }
+
+    .btnSubmit {
+      width: 100%;
+      min-height: 48px;
+      margin-top: 8px;
+      padding: 8px 12px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background: $mainColor;
+      color: $txtWhiteColor;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .loginText {
+      margin-top: 12px;
+      text-align: center;
+
+      .btn {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .auth__content {
+    width: 100%;
+  }
+}

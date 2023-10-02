@@ -1,0 +1,154 @@
+.userCard {
+  font-family: inherit;
+}
+
+.userCard__header .container {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+.userCard__header .container .headerBtn {
+  margin-top: 32px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.userCard__header .container .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.userCard__header .container .userInfo .avatar {
+  width: 187px;
+  min-width: 187px;
+  height: 187px;
+  border-radius: 100px;
+  background: #F8F8F8;
+}
+.userCard__header .container .userInfo .avatar .image {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.userCard__header .container .userInfo .nameWrap {
+  max-width: 865px;
+  color: #FFF;
+}
+.userCard__header .container .userInfo .nameWrap .name {
+  margin-bottom: 14px;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+}
+.userCard__header .container .userInfo .nameWrap .label {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.userCard__content {
+  position: relative;
+  min-height: 445px;
+  padding-top: 49px;
+  padding-bottom: 49px;
+}
+.userCard__content .contentWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 50px;
+  color: #151317;
+}
+.userCard__content .contentWrap .aboutUser {
+  max-width: 630px;
+}
+.userCard__content .contentWrap .aboutUser .text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.userCard__content .contentWrap .aboutUser .text:not(:last-child) {
+  margin-bottom: 20px;
+}
+.userCard__content .contentWrap .userContacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+.userCard__content .contentWrap .userContacts .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  color: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+@media (max-width: 375px) {
+  .userCard__header .container {
+    padding-bottom: 64px;
+    gap: 12px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .userCard__header .container .headerBtn {
+    margin-top: 12px;
+  }
+  .userCard__header .container .userInfo {
+    gap: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .userCard__header .container .userInfo .nameWrap {
+    max-width: 100%;
+    text-align: center;
+  }
+  .userCard__header .container .userInfo .nameWrap .name {
+    font-size: 36px;
+  }
+  .userCard__header .container .userInfo .nameWrap .label {
+    font-size: 20px;
+  }
+  .userCard__content {
+    min-height: 445px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .userCard__content .contentWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 34px;
+  }
+  .userCard__content .contentWrap .aboutUser {
+    max-width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

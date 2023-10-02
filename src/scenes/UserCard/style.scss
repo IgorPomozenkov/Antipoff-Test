@@ -1,0 +1,149 @@
+@import '../../styles/variables';
+
+.userCard {
+  font-family: inherit;
+}
+
+.userCard__header {
+
+  .container {
+    min-height: inherit;
+    display: flex;
+    gap: 30px;
+
+    .headerBtn {
+      margin-top: 32px;
+      align-self: flex-start;
+    }
+
+    .userInfo {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+
+      .avatar {
+        width: 187px;
+        min-width: 187px;
+        height: 187px;
+        border-radius: 100px;
+        background: $inputColor;
+
+        .image {
+          border-radius: inherit;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .nameWrap {
+        max-width: 865px;
+        color: $txtWhiteColor;
+
+        .name {
+          margin-bottom: 14px;
+          font-size: 64px;
+          font-style: normal;
+          font-weight: 400;
+        }
+
+        .label {
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+.userCard__content {
+  position: relative;
+  min-height: 445px;
+  padding-top: 49px;
+  padding-bottom: 49px;
+
+  .contentWrap {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    color: $txtBlackColor;
+
+    .aboutUser {
+      max-width: 630px;
+
+      .text {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .userContacts {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: inherit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .userCard__header .container {
+    padding-bottom: 64px;
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .userCard__header .container .headerBtn {
+    margin-top: 12px;
+  }
+
+  .userCard__header .container .userInfo {
+    gap: 16px;
+    flex-direction: column-reverse;
+  }
+
+  .userCard__header .container .userInfo .nameWrap {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .userCard__header .container .userInfo .nameWrap .name {
+    font-size: 36px;
+  }
+
+  .userCard__header .container .userInfo .nameWrap .label {
+    font-size: 20px;
+  }
+
+  .userCard__content {
+    min-height: 445px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .userCard__content .contentWrap {
+    flex-direction: column-reverse;
+    gap: 34px
+  }
+
+  .userCard__content .contentWrap .aboutUser {
+    max-width: 100%;
+  }
+}

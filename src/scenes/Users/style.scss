@@ -1,0 +1,177 @@
+@import '../../styles/variables';
+
+.users {
+  font-family: inherit;
+}
+
+.users__header {
+  color: $txtWhiteColor;
+
+  .container {
+    padding-top: 64px;
+    text-align: center;
+  }
+
+  .heading {
+    max-width: 846px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .text {
+    max-width: 846px;
+    margin: 0 auto;
+    color: $txtGrayLightColor;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+.users__content {
+  position: relative;
+  min-height: 594px;
+  padding-top: 48px;
+  padding-bottom: 69px;
+
+  .userList {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none;
+
+    .userList__card {
+      position: relative;
+      width: 305px;
+      min-height: 263px;
+      padding: 36px 70px 20px 70px;
+      border-radius: 10px;
+      background: $backColor;
+      box-shadow: 0px 0.99605px 3.98418px 0px rgba(51, 51, 51, 0.15);
+      cursor: pointer;
+
+      .userInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        .avatar {
+          width: 124px;
+          min-width: 124px;
+          height: 124px;
+          border-radius: 124px;
+          background: $inputColor;
+
+          .image {
+            border-radius: inherit;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .name {
+          color: $txtBlackColor;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+
+      .userLike {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 3;
+        // display: flex;
+        // justify-content: flex-end;
+
+        .btn {
+          width: 30px;
+          height: 28px;
+          border: none;
+          outline: none;
+          border-radius: 4px;
+          background: $inputColor;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: all .2s;
+
+          svg {
+            transition: inherit;
+          }
+        }
+
+        .btn_stroke {
+
+          &:hover svg path {
+            fill: $mainColor;
+            stroke: $mainColor;
+          }
+        }
+        .btn_fill {
+
+          &:hover svg path {
+            fill: transparent;
+            stroke: $txtBlackColor;
+          }
+        }
+      }
+    }
+  }
+
+  .showMore {
+    //display: flex;
+    margin-top: 56px;
+    text-align: center;
+
+    .btn {
+      width: 170px;
+      height: 40px;
+      margin: 0 auto;
+      padding: 8px;
+      background: none;
+      outline: none;
+      border-radius: 8px;
+      border: 1px solid $txtBlackColor;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .users__header .heading {
+    max-width: 100%;
+    font-size: 36px;
+  }
+
+  .users__header .text {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .users__content {
+    min-height: 400px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .users__content .showMore {
+    margin-top: 32px;
+  }
+}
